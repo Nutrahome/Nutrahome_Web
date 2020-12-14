@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #hero .btn-get-started {
@@ -510,7 +510,7 @@ section {
 }
 
 .clients img {
-  width: 40%;
+  width: 50%;
   filter: grayscale(100);
   transition: all 0.4s ease-in-out;
   display: inline-block;
@@ -1092,7 +1092,7 @@ section {
 .contact .php-email-form {
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background-color: rgba(253, 247, 166, 0.7);
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
