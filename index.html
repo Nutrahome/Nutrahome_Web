@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/nutrahome.png" rel="icon">
+  <link href="assets/img/nutrahome.png?v=1" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -26,7 +26,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=1" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bethany - v3.0.0
@@ -53,11 +53,11 @@
         <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active"><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="drop-down"><a href="">Drop Down</a>
+            <li><a href="#value">Our Value</a></li>
+            <li><a href="#why-us">Features</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <!-- <li class="drop-down"><a href="">Drop Down</a>
               <ul>
                 <li><a href="#">Drop Down 1</a></li>
                 <li class="drop-down"><a href="#">Drop Down 2</a>
@@ -73,8 +73,8 @@
                 <li><a href="#">Drop Down 4</a></li>
                 <li><a href="#">Drop Down 5</a></li>
               </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
+            </li> -->
+            <li><a href="#contact">Contact Us</a></li>
 
             <li class="get-started"><a href="#contact">Get Started</a></li>
           </ul>
@@ -132,7 +132,7 @@
     <!-- End Clients Section -->
 
     <!-- ======= Description Section ======= -->
-    <section id="why-us" class="why-us">
+    <section id="value" class="why-us">
       <div class="container">
 
         <div class="row">
@@ -321,7 +321,7 @@
     <!-- End Cta Section -->
 
     <!-- ======= Customized to fit your needs Section ======= -->
-    <section id="why-us" class="why-us" style="background-color: #f6f6f7">
+    <section id="service" class="why-us" style="background-color: #f6f6f7">
       <div class="container">
 
         <div class="row">
@@ -828,7 +828,7 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -836,7 +836,13 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center row">
+                <center>
+                  <button onclick="send()" type="submit">
+                    Send Message
+                  </button>
+                </center>
+              </div>
             </form>
           </div>
         </div>
@@ -858,7 +864,7 @@
             <h3>Nutrahome</h3>
             <p>
               Jakarta, Indonesia <br><br>
-              <strong>Phone:</strong> +62 888 0837 9141<br>
+              <strong>Phone:</strong> 0851-5522-3526<br>
               <strong>Email:</strong> asknutrahome@gmail.com<br>
             </p>
           </div>
@@ -898,7 +904,7 @@
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.instagram.com/nutrahome/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
           <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
@@ -945,6 +951,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- send email -->
+  <script>
+    function send(){
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      window.location.href = "mailto:asknutrahome@gmail.com?subject=Web%20Ask%20Nutrahome&body=" + name + "%20(" + email + ")%0D%0A" + message;
+    }
+  </script>
 
 </body>
 
